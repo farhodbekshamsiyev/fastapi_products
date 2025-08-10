@@ -14,12 +14,6 @@ class ProductBase(BaseModel):
             raise ValueError('Product name cannot be null or empty')
         return v
 
-    @field_validator('catalog_id', mode='before')
-    def empty_string_to_none(cls, v):
-        if v == '' or v is None:
-            return None
-        return v
-
 
 class ProductCreate(ProductBase):
     pass
