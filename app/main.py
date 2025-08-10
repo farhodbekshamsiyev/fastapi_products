@@ -7,7 +7,7 @@ from app.routers import catalog, product
 def create_app() -> FastAPI:
     """Create a FastAPI application."""
 
-    app = FastAPI(
+    myapp = FastAPI(
         title="Shop Inventory FastAPI Application",
         description="This is a sample Shop Inventory FastAPI application with CORS enabled.",
         version="1.0.0",
@@ -17,7 +17,7 @@ def create_app() -> FastAPI:
     )
 
     # Set all CORS enabled origins
-    app.add_middleware(
+    myapp.add_middleware(
         CORSMiddleware,
         allow_origins=["*"],
         allow_credentials=True,
@@ -25,10 +25,10 @@ def create_app() -> FastAPI:
         allow_headers=["*"],
     )
 
-    app.include_router(catalog.router)
-    app.include_router(product.router)
+    myapp.include_router(catalog.router)
+    myapp.include_router(product.router)
 
-    return app
+    return myapp
 
 
-myapp = create_app()
+app = create_app()
