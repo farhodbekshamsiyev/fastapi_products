@@ -1,0 +1,11 @@
+[project]
+name = "fastapi-products"
+version = "0.1.0"
+description = "Add your description here"
+requires-python = ">=3.13"
+dependencies = [
+    "alembic>=1.16.4",
+    "fastapi[standard]>=0.116.1",
+    "sqlalchemy>=2.0.42",
+    "uvicorn>=0.35.0",
+]
