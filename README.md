@@ -26,11 +26,16 @@ A modern inventory management API built with FastAPI, supporting both SQLite and
 
 3. **Start the FastAPI server:**
    ```sh
-   uvicorn app.main:app --reload
+   uv run uvicorn app.main:app --reload
    ```
 
 4. **API Docs:**
    Visit [http://localhost:8000/docs](http://localhost:8000/docs)
+
+5. **to run tests with pytest:**
+   ```
+   uv run pytest -v
+   ```
 
 ## Project Structure
 - `app/` - Main application code (models, schemas, repositories, routers)
